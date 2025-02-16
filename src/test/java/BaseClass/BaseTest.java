@@ -16,27 +16,32 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.Properties;
 
 public class BaseTest {
 
     protected static AppiumDriver driver;
     protected Properties properties;
+    protected static HashMap<String, String> strings = new HashMap<String, String>();
     InputStream inputStream;
-
-//    public BaseTest(){
-//        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-//    }
+    InputStream stringxml;
+    TestUtils utils;
 
 
     @Parameters({"platformName", "deviceName", "udid"})
     @BeforeTest
-    public void BeforeTestHook(String platformName, String deviceName, String udid) throws IOException {
+    public void BeforeTestHook(String platformName, String deviceName, String udid) throws Exception {
 
         try{
             properties = new Properties();
             String propertiesFilename = "config.properties";
+            String xmlFilename = "strings.xml";
             inputStream = getClass().getClassLoader().getResourceAsStream(propertiesFilename);
+            stringxml = getClass().getClassLoader().getResourceAsStream(xmlFilename);
+            utils = new TestUtils();
+            strings = utils.parseStringXML(stringxml);
+
             properties.load(inputStream);
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -56,6 +61,15 @@ public class BaseTest {
         {
             e.printStackTrace();
             throw e;
+        }finally {
+            if(inputStream!=null)
+            {
+                inputStream.close();
+            }
+            if(stringxml!=null)
+            {
+                stringxml.close();
+            }
         }
     }
 

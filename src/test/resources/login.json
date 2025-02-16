@@ -1,0 +1,14 @@
+{
+  "invalidUser": {
+    "username": "hello@example.com",
+    "password": "10203040"
+  },
+  "invalidPassword": {
+    "username": "bob@example.com",
+    "password": "10203043"
+  },
+  "ValidCreds": {
+    "username": "bob@example.com",
+    "password": "10203040"
+  }
+}
