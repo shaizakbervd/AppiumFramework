@@ -2,4 +2,10 @@
 <resources>
     <string name="err_invalid_usr_pwd">Provided credentials do not match any user in this service.</string>
     <string name="products_title">Products</string>
+
+<!--    product data-->
+    <string name="title">Sauce Labs Backpack</string>
+    <string name="price">$29.99</string>
+    <string name="description">carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+    </string>
 </resources>
