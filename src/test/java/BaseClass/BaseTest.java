@@ -2,6 +2,7 @@ package BaseClass;
 
 import Utils.TestUtils;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.InteractsWithApps;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
@@ -105,9 +106,20 @@ public class BaseTest {
         return element.getAttribute(attribute);
     }
 
-    @AfterTest
-    public void AfterTestHook()
+    public void closeApp()
     {
-        driver.quit();
+        ((InteractsWithApps) driver).terminateApp(properties.getProperty("androidappPackage"));
     }
+
+    public void launchApp()
+    {
+        ((InteractsWithApps) driver).activateApp(properties.getProperty("androidappPackage"));
+
+    }
+
+//    @AfterTest
+//    public void AfterTestHook()
+//    {
+//        driver.quit();
+//    }
 }

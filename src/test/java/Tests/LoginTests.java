@@ -44,12 +44,6 @@ public class LoginTests extends BaseTest {
 
     }
 
-    @AfterClass
-    public void afterclass()
-    {
-
-    }
-
     @BeforeMethod
     public void beforemethod(Method m)
     {
@@ -57,9 +51,6 @@ public class LoginTests extends BaseTest {
         loginPage = new LoginPage();
         System.out.println(m.getName());
 
-    }
-    @AfterMethod
-    public void aftermethod() {
 
     }
 
@@ -103,6 +94,15 @@ public class LoginTests extends BaseTest {
 
         String expected_error = strings.get("products_title");
         Assert.assertEquals(productsPage.getTitle(), expected_error);
+    }
+
+    @AfterClass
+    public void closure()
+    {
+        settingsPage = menupage.Click_SideMenu();
+        settingsPage.Click_Logout();
+        closeApp();
+        launchApp();
     }
 
 

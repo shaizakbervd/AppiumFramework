@@ -8,7 +8,6 @@ import Pages.ProductsPage;
 import Pages.SettingsPage;
 import org.json.JSONObject;
 import org.json.JSONTokener;
-import org.testng.Assert;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
@@ -26,7 +25,7 @@ public class ProductTests extends BaseTest {
     JSONObject logindata;
 
     @BeforeClass
-    public void beforeclass() throws IOException {
+    public void beforeclass() throws IOException, InterruptedException {
 
         String datafilename = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "login.json";
 
@@ -44,12 +43,8 @@ public class ProductTests extends BaseTest {
         reader.close();
         JSONTokener jsonTokener = new JSONTokener(jsonContent.toString());
         logindata = new JSONObject(jsonTokener);
+//        Thread.sleep(3000);
 
-    }
-
-    @AfterClass
-    public void afterclass()
-    {
 
     }
 
@@ -59,6 +54,7 @@ public class ProductTests extends BaseTest {
         //bar bar har test ke liye initialize na krna pare isiliye hook ma initialize krdia
         loginPage = new LoginPage();
         System.out.println(m.getName());
+
 
     }
     @AfterMethod
@@ -72,7 +68,7 @@ public class ProductTests extends BaseTest {
         SoftAssert sa = new SoftAssert();
         menupage = new MenuPage();
         settingsPage = menupage.Click_SideMenu();
-        settingsPage.Click_Login();
+        loginPage = settingsPage.Click_Login();
 
         loginPage.EnterUserName(logindata.getJSONObject("ValidCreds").getString("username"));
         loginPage.EnterPassword(logindata.getJSONObject("ValidCreds").getString("password"));
@@ -91,10 +87,8 @@ public class ProductTests extends BaseTest {
         SoftAssert sa = new SoftAssert();
         productsDetailsPage = productsPage.Click_Product();
         sa.assertEquals(productsDetailsPage.getProducTitle(), strings.get("title"));
-        sa.assertEquals(productsDetailsPage.getProductDescription(), strings.get("description"));
+        sa.assertEquals(productsDetailsPage.getProductDescription().contains(strings.get("description")), "Does not matches");
+
         sa.assertAll();
-
     }
-
-
 }
