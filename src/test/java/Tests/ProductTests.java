@@ -87,7 +87,8 @@ public class ProductTests extends BaseTest {
         SoftAssert sa = new SoftAssert();
         productsDetailsPage = productsPage.Click_Product();
         sa.assertEquals(productsDetailsPage.getProducTitle(), strings.get("title"));
-        sa.assertEquals(productsDetailsPage.getProductDescription().contains(strings.get("description")), "Does not matches");
+        sa.assertEquals(productsDetailsPage.getProductPrice(), strings.get("price"));
+//        sa.assertEquals(productsDetailsPage.getProductDescription().contains(strings.get("description")), "Does not matches");
 
         sa.assertAll();
     }

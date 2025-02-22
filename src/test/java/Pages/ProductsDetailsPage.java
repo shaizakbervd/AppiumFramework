@@ -15,7 +15,12 @@ public class ProductsDetailsPage extends MenuPage {
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Sauce Labs Backpack\"]") private WebElement product_title;
     @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc=\"product description\"]") private WebElement product_description;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc=\"product price\"]") private WebElement product_price;
 
+    public String getProductPrice()
+    {
+        return GetAttribute(product_price, "text");
+    }
 
     public String getProducTitle()
     {

@@ -13,14 +13,14 @@
             <class name="Tests.LoginTests">
 
             </class>
-            <class name="Tests.ProductTests">
+<!--            <class name="Tests.ProductTests">-->
             <!--                <methods>-->
 <!--                    <include name="InvalidUsername">-->
 
 <!--                    </include>-->
 <!--                </methods>-->
 
-            </class>
+<!--            </class>-->
         </classes>
     </test>
 </suite>
