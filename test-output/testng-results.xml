@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-23T03:54:01 PKT" name="All Test Suite" finished-at="2025-02-23T03:55:00 PKT" duration-ms="58722">
+  <suite started-at="2025-03-01T02:56:53 PKT" name="All Test Suite" finished-at="2025-03-01T02:57:51 PKT" duration-ms="58613">
     <groups>
     </groups>
-    <test started-at="2025-02-23T03:54:01 PKT" name="Test" finished-at="2025-02-23T03:55:00 PKT" duration-ms="58722">
+    <test started-at="2025-03-01T02:56:53 PKT" name="Test" finished-at="2025-03-01T02:57:51 PKT" duration-ms="58613">
       <class name="Tests.LoginTests">
-        <test-method is-config="true" signature="BeforeTestHook(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:01 PKT" name="BeforeTestHook" finished-at="2025-02-23T03:54:16 PKT" duration-ms="14322" status="PASS">
+        <test-method is-config="true" signature="BeforeTestHook(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:56:53 PKT" name="BeforeTestHook" finished-at="2025-03-01T02:57:12 PKT" duration-ms="19212" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,15 +28,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeTestHook -->
-        <test-method is-config="true" signature="beforeclass()[pri:0, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:16 PKT" name="beforeclass" finished-at="2025-02-23T03:54:16 PKT" duration-ms="20" status="PASS">
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:12 PKT" name="beforeclass" finished-at="2025-03-01T02:57:12 PKT" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeclass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:16 PKT" name="beforeMethod" finished-at="2025-02-23T03:54:19 PKT" duration-ms="2812" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:12 PKT" name="beforeMethod" finished-at="2025-03-01T02:57:14 PKT" duration-ms="1935" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforemethod(java.lang.reflect.Method)[pri:0, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:19 PKT" name="beforemethod" finished-at="2025-02-23T03:54:20 PKT" duration-ms="1326" status="PASS">
+        <test-method is-config="true" signature="beforemethod(java.lang.reflect.Method)[pri:0, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:14 PKT" name="beforemethod" finished-at="2025-03-01T02:57:15 PKT" duration-ms="1226" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,26 +47,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforemethod -->
-        <test-method signature="InvalidUsername()[pri:1, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:20 PKT" name="InvalidUsername" finished-at="2025-02-23T03:54:36 PKT" duration-ms="15947" status="PASS">
+        <test-method signature="InvalidUsername()[pri:1, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:15 PKT" name="InvalidUsername" finished-at="2025-03-01T02:57:28 PKT" duration-ms="12413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidUsername -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:36 PKT" name="afterMethod" finished-at="2025-02-23T03:54:38 PKT" duration-ms="1885" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:28 PKT" name="afterMethod" finished-at="2025-03-01T02:57:29 PKT" duration-ms="1759" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=InvalidUsername status=SUCCESS method=LoginTests.InvalidUsername()[pri:1, instance:Tests.LoginTests@9353778] output={null}]]]>
+                <![CDATA[[TestResult name=InvalidUsername status=SUCCESS method=LoginTests.InvalidUsername()[pri:1, instance:Tests.LoginTests@7b50df34] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:38 PKT" name="beforeMethod" finished-at="2025-02-23T03:54:39 PKT" duration-ms="952" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:29 PKT" name="beforeMethod" finished-at="2025-03-01T02:57:30 PKT" duration-ms="939" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforemethod(java.lang.reflect.Method)[pri:0, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:39 PKT" name="beforemethod" finished-at="2025-02-23T03:54:39 PKT" duration-ms="185" status="PASS">
+        <test-method is-config="true" signature="beforemethod(java.lang.reflect.Method)[pri:0, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:30 PKT" name="beforemethod" finished-at="2025-03-01T02:57:31 PKT" duration-ms="177" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -77,26 +77,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforemethod -->
-        <test-method signature="invalidPassword()[pri:2, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:39 PKT" name="invalidPassword" finished-at="2025-02-23T03:54:43 PKT" duration-ms="4251" status="PASS">
+        <test-method signature="invalidPassword()[pri:2, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:31 PKT" name="invalidPassword" finished-at="2025-03-01T02:57:35 PKT" duration-ms="4203" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidPassword -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:43 PKT" name="afterMethod" finished-at="2025-02-23T03:54:45 PKT" duration-ms="1899" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:35 PKT" name="afterMethod" finished-at="2025-03-01T02:57:36 PKT" duration-ms="1568" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=invalidPassword status=SUCCESS method=LoginTests.invalidPassword()[pri:2, instance:Tests.LoginTests@9353778] output={null}]]]>
+                <![CDATA[[TestResult name=invalidPassword status=SUCCESS method=LoginTests.invalidPassword()[pri:2, instance:Tests.LoginTests@7b50df34] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:45 PKT" name="beforeMethod" finished-at="2025-02-23T03:54:46 PKT" duration-ms="1323" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:36 PKT" name="beforeMethod" finished-at="2025-03-01T02:57:37 PKT" duration-ms="986" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforemethod(java.lang.reflect.Method)[pri:0, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:46 PKT" name="beforemethod" finished-at="2025-02-23T03:54:47 PKT" duration-ms="203" status="PASS">
+        <test-method is-config="true" signature="beforemethod(java.lang.reflect.Method)[pri:0, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:37 PKT" name="beforemethod" finished-at="2025-03-01T02:57:38 PKT" duration-ms="240" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -107,22 +107,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforemethod -->
-        <test-method signature="ValidLogin()[pri:3, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:47 PKT" name="ValidLogin" finished-at="2025-02-23T03:54:50 PKT" duration-ms="3759" status="PASS">
+        <test-method signature="ValidLogin()[pri:3, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:38 PKT" name="ValidLogin" finished-at="2025-03-01T02:57:41 PKT" duration-ms="3846" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidLogin -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:50 PKT" name="afterMethod" finished-at="2025-02-23T03:54:52 PKT" duration-ms="1656" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:41 PKT" name="afterMethod" finished-at="2025-03-01T02:57:43 PKT" duration-ms="1798" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidLogin status=SUCCESS method=LoginTests.ValidLogin()[pri:3, instance:Tests.LoginTests@9353778] output={null}]]]>
+                <![CDATA[[TestResult name=ValidLogin status=SUCCESS method=LoginTests.ValidLogin()[pri:3, instance:Tests.LoginTests@7b50df34] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="closure()[pri:0, instance:Tests.LoginTests@9353778]" started-at="2025-02-23T03:54:52 PKT" name="closure" finished-at="2025-02-23T03:55:00 PKT" duration-ms="8108" status="PASS">
+        <test-method is-config="true" signature="closure()[pri:0, instance:Tests.LoginTests@7b50df34]" started-at="2025-03-01T02:57:43 PKT" name="closure" finished-at="2025-03-01T02:57:51 PKT" duration-ms="8227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closure -->

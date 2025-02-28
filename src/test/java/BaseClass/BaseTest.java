@@ -7,6 +7,8 @@ import io.appium.java_client.InteractsWithApps;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.screenrecording.CanRecordScreen;
 import org.apache.commons.codec.binary.Base64;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -30,6 +32,7 @@ public class BaseTest {
     InputStream inputStream;
     InputStream stringxml;
     TestUtils utils;
+    static Logger log = LogManager.getLogger(BaseTest.class.getName());
 
     @BeforeMethod
     public void beforeMethod()
@@ -69,6 +72,11 @@ public class BaseTest {
     @Parameters({"platformName", "deviceName", "udid"})
     @BeforeTest
     public void BeforeTestHook(String platformName, String deviceName, String udid) throws Exception {
+
+        log.info("info msg");
+        log.error("error");
+        log.debug("debug");
+        log.warn("warning");
 
         utils = new TestUtils();
         dateTime = utils.getDateTime();

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+
+    <Properties>
+        <Property name="filename">logs</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- Console Appender -->
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"/>
+        </Console>
+
+        <!-- File Appender -->
+        <File name="LOGFILE" fileName="${filename}/logs.log">
+            <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <!-- Logger for your package -->
+        <Logger name="Tests" level="DEBUG" additivity="false">
+            <AppenderRef ref="LOGFILE"/>
+            <AppenderRef ref="STDOUT"/> <!-- Added to allow Debug logs in Console -->
+        </Logger>
+
+        <!-- Root Logger should capture all levels -->
+        <Root level="DEBUG">
+            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="LOGFILE"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

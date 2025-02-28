@@ -15,7 +15,9 @@
           <include name="ValidLogin"/>
           <include name="beforemethod"/>
           <include name="closure"/>
+          <include name="afterMethod"/>
           <include name="BeforeTestHook"/>
+          <include name="beforeMethod"/>
         </methods>
       </class> <!-- Tests.LoginTests -->
     </classes>
