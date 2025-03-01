@@ -6,6 +6,9 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.InteractsWithApps;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.screenrecording.CanRecordScreen;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,16 +26,62 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+//use this listener along with with html-config.xml and extent properties to generate default reports
+//@Listeners(ExtentITestListenerClassAdapter.class)
 public class BaseTest {
 
+    public static String devicename;
     protected static AppiumDriver driver;
     protected static String dateTime;
     protected Properties properties;
     protected static HashMap<String, String> strings = new HashMap<String, String>();
     InputStream inputStream;
     InputStream stringxml;
-    TestUtils utils;
-    static Logger log = LogManager.getLogger(BaseTest.class.getName());
+    TestUtils utils = new TestUtils();
+    //start appium server programmatically instead of starting it manually
+    private static AppiumDriverLocalService server;
+
+    @BeforeSuite
+    public void beforeSuite()
+    {
+        server = getAppiumServerDefault();
+        server.start();
+        utils.log().info("starting server");
+
+    }
+
+    @AfterSuite
+    public void afterSuite()
+    {
+        server.stop();
+        utils.log().info("stopping server");
+    }
+
+    public AppiumDriverLocalService getAppiumServerDefault()
+    {
+        return AppiumDriverLocalService.buildDefaultService();
+    }
+
+    //if the above method does not work
+
+    public AppiumDriverLocalService getAppiumServerCustom()
+    {
+        return AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
+                //path where node is installed
+                .usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe"))
+                //path where appium server is installed
+                .withAppiumJS(new File(""))
+                .usingPort(4723)
+                //if session exist then over ride existing session
+                .withArgument(GeneralServerFlag.SESSION_OVERRIDE));
+    }
+
+    public String getDeviceName()
+    {
+        return devicename;
+    }
+
+
 
     @BeforeMethod
     public void beforeMethod()
@@ -73,14 +122,10 @@ public class BaseTest {
     @BeforeTest
     public void BeforeTestHook(String platformName, String deviceName, String udid) throws Exception {
 
-        log.info("info msg");
-        log.error("error");
-        log.debug("debug");
-        log.warn("warning");
 
-        utils = new TestUtils();
         dateTime = utils.getDateTime();
         try{
+            devicename = deviceName;
             properties = new Properties();
             String propertiesFilename = "config.properties";
             String xmlFilename = "strings.xml";
@@ -103,6 +148,8 @@ public class BaseTest {
 
             driver = new AndroidDriver(url, capabilities);
             System.out.println(driver.getSessionId());
+            utils.log().info("started driver session with id "+driver.getSessionId());
+
         } catch (Exception e)
         {
             e.printStackTrace();

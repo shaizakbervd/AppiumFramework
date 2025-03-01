@@ -1,8 +1,11 @@
 package Listeners;
 
 import BaseClass.BaseTest;
+import Reports.ExtentReport;
+import com.aventstack.extentreports.Status;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -47,5 +50,50 @@ public class TestListener implements ITestListener {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        ExtentReport.getTest().log(Status.FAIL, "Test Fail");
+
+    }
+
+    @Override
+    public void onTestStart(ITestResult result)
+    {
+        BaseTest baseTest = new BaseTest();
+        ExtentReport.startTest(result.getName(), result.getMethod().getDescription())
+                .assignCategory(baseTest.getDeviceName())
+                .assignAuthor("Shaiz");
+
+    }
+
+    @Override
+    public void onTestSuccess(ITestResult result)
+    {
+        ExtentReport.getTest().log(Status.PASS, "Test Passed");
+
+    }
+
+    @Override
+    public void onTestSkipped(ITestResult result)
+    {
+        ExtentReport.getTest().log(Status.SKIP, "Test Skipped");
+
+
+    }
+
+    @Override
+    public void onTestFailedButWithinSuccessPercentage(ITestResult result)
+    {
+
+    }
+
+    @Override
+    public void onStart(ITestContext context)
+    {
+
+    }
+
+    @Override
+    public void onFinish(ITestContext context)
+    {
+        ExtentReport.getReporter().flush();
     }
 }

@@ -14,9 +14,13 @@
           <include name="beforeclass"/>
           <include name="ValidLogin"/>
           <include name="beforemethod"/>
+          <include name="beforeSuite"/>
           <include name="closure"/>
-          <include name="afterMethod"/>
+          <include name="InvalidUsername"/>
+          <include name="afterSuite"/>
           <include name="BeforeTestHook"/>
+          <include name="afterMethod"/>
+          <include name="invalidPassword"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- Tests.LoginTests -->

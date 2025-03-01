@@ -1,0 +1,41 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<extentreports>-->
+<!--    <configuration>-->
+<!--        &lt;!&ndash; report theme &ndash;&gt;-->
+<!--        &lt;!&ndash; standard, dark &ndash;&gt;-->
+<!--        <theme>standard</theme>-->
+
+<!--        &lt;!&ndash; document encoding &ndash;&gt;-->
+<!--        &lt;!&ndash; defaults to UTF-8 &ndash;&gt;-->
+<!--        <encoding>UTF-8</encoding>-->
+
+<!--        &lt;!&ndash; protocol for script and stylesheets &ndash;&gt;-->
+<!--        &lt;!&ndash; defaults to https &ndash;&gt;-->
+<!--        <protocol>https</protocol>-->
+
+<!--        &lt;!&ndash; title of the document &ndash;&gt;-->
+<!--        <documentTitle>Extent Framework</documentTitle>-->
+
+<!--        &lt;!&ndash; report name - displayed at top-nav &ndash;&gt;-->
+<!--        <reportName>Build 1</reportName>-->
+
+<!--        &lt;!&ndash; timestamp format &ndash;&gt;-->
+<!--        <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>-->
+
+<!--        &lt;!&ndash; custom javascript &ndash;&gt;-->
+<!--        <scripts>-->
+<!--            <![CDATA[-->
+<!--                $(document).ready(function() {-->
+
+<!--                });-->
+<!--            ]]>-->
+<!--        </scripts>-->
+
+<!--        &lt;!&ndash; custom styles &ndash;&gt;-->
+<!--        <styles>-->
+<!--            <![CDATA[-->
+
+<!--            ]]>-->
+<!--        </styles>-->
+<!--    </configuration>-->
+<!--</extentreports>-->

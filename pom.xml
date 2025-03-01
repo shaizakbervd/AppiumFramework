@@ -67,6 +67,22 @@
       <version>2.24.3</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>4.1.2</version>
+    </dependency>
+
+
+    <!--    &lt;!&ndash; https://mvnrepository.com/artifact/com.aventstack/extentreports-testng-adapter &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>com.aventstack</groupId>-->
+<!--      <artifactId>extentreports-testng-adapter</artifactId>-->
+<!--      <version>1.0.7</version>-->
+<!--    </dependency>-->
+
+
 
 
 
