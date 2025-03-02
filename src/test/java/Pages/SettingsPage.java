@@ -22,15 +22,15 @@ public class SettingsPage extends BaseTest {
 
     public LoginPage Click_Login()
     {
-        Click(loginbtn);
+        Click(loginbtn, "clicking login");
         return new LoginPage();
     }
 
     public LoginPage Click_Logout()
     {
-        Click(logoutbtn);
-        Click(confirmlogoutbtn);
-        Click(confirmlogoutbtnOk);
+        Click(logoutbtn, "click logout button");
+        Click(confirmlogoutbtn, "click confirm logout button");
+        Click(confirmlogoutbtnOk, "ok button pressed");
         return new LoginPage();
     }
 

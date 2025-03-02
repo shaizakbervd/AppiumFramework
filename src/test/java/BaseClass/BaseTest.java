@@ -1,6 +1,8 @@
 package BaseClass;
 
+import Reports.ExtentReport;
 import Utils.TestUtils;
+import com.aventstack.extentreports.Status;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.InteractsWithApps;
@@ -177,10 +179,24 @@ public class BaseTest {
         waitForVisibility(element);
         element.click();
     }
+    public void Click(WebElement element, String msg)
+    {
+        waitForVisibility(element);
+        utils.log().info(msg);
+        ExtentReport.getTest().log(Status.INFO, msg);
+        element.click();
+    }
 
     public void SendKeys(WebElement element, String value)
     {
         waitForVisibility(element);
+        element.sendKeys(value);
+    }
+    public void SendKeys(WebElement element, String value, String msg)
+    {
+        waitForVisibility(element);
+        utils.log().info(msg);
+        ExtentReport.getTest().log(Status.INFO, msg);
         element.sendKeys(value);
     }
 
@@ -191,6 +207,17 @@ public class BaseTest {
         username.clear();
         pwd.clear();
     }
+
+    public void Clear_Fields(WebElement username, WebElement pwd, String msg)
+    {
+        waitForVisibility(username);
+        waitForVisibility(pwd);
+        utils.log().info(msg);
+        ExtentReport.getTest().log(Status.INFO, msg);
+        username.clear();
+        pwd.clear();
+    }
+
 
     public String  GetAttribute(WebElement element, String attribute)
     {

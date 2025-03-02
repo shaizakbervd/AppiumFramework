@@ -55,6 +55,7 @@ public class ProductTests extends BaseTest {
         loginPage = new LoginPage();
         System.out.println(m.getName());
 
+        //test cases independent rahe tu beforemthod ma close and launch app use kro taake har case independent chale
 
     }
     @AfterMethod
